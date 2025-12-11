@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@aws-amplify/backend": "^1.19.0",
+    "@stripe/stripe-js": "^8.5.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
