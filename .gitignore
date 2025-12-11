@@ -2,10 +2,6 @@
 node_modules/
 dist/
 build/
-.cache/
-.vite/
-coverage/
-.next/
 
 # Ignore environment variables
 .env
