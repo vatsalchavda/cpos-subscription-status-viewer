@@ -22,7 +22,7 @@ export default function SignIn() {
         const result = await signIn({ username: email, password });
         console.debug("[SignIn] result.nextStep", result.nextStep);
         const step = result.nextStep?.signInStep;
-        if (step === "CONFIRM_SIGN_IN_WITH_NEW_PASSWORD") {
+        if (step === "CONFIRM_SIGN_IN_WITH_NEW_PASSWORD_REQUIRED") {
           setNeedsNewPassword(true);
           setStatus("idle");
           return;

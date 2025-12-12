@@ -1,6 +1,4 @@
+/* This file must exist for the import in main.tsx to work. */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Minimal app-level styles */
-html, body, #root { height: 100%; }

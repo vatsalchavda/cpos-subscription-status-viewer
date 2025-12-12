@@ -45,11 +45,17 @@ export async function handler(_event: APIGatewayProxyEvent): Promise<APIGatewayP
       const item = sub.items.data[0];
       const price = item?.price;
       const product = price?.product as Stripe.Product | null;
-      info.planName = product?.name ?? price?.nickname ?? price?.id ?? undefined;
+      const planName =
+        (product?.name as string | undefined) ??
+        (price?.nickname as string | undefined) ??
+        (price?.id as string | undefined);
+      if (typeof planName === "string") {
+        info.planName = planName;
+      }
 
       // Guard TS on period end (Stripe types may vary)
-      const periodEnd = (sub as any).current_period_end as number | undefined;
-      if (periodEnd) {
+      const periodEnd = (sub as any).current_period_end;
+      if (typeof periodEnd === "number") {
         info.renewalDate = new Date(periodEnd * 1000).toISOString();
       }
     }

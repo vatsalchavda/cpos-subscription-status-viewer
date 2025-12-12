@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import SignIn from "./pages/SignIn";
-import Dashboard from "./pages/Dashboard";
-import Subscription from "./pages/Subscription";
+import SignIn from "./pages/SignIn.js";
+import Dashboard from "./pages/Dashboard.js";
+import Subscription from "./pages/Subscription.js";
 import { useEffect, useState } from "react";
 import { getCurrentUser } from "aws-amplify/auth";
 import { Hub } from "aws-amplify/utils";
