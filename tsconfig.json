@@ -47,8 +47,10 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "NodeNext",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "typeRoots": ["./node_modules/@types", "./src/types"]
   },
-  "include": ["src", "amplify"],
+  "include": ["src", "amplify", "src/index.css"],
   "exclude": ["node_modules", "dist"]
 }
