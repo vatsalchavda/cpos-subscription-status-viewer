@@ -1,10 +1,32 @@
 {
+  "name": "cpos-subscription-status-viewer",
+  "private": true,
+  "type": "module",
   "dependencies": {
-    "@aws-amplify/backend": "^1.19.0",
-    "@stripe/stripe-js": "^8.5.3"
+    "@stripe/stripe-js": "^8.5.3",
+    "stripe": "^20.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.26.2",
+    "aws-amplify": "^6.0.0"
   },
   "devDependencies": {
+    "@aws-amplify/backend": "^1.19.0",
+    "@aws-amplify/backend-cli": "^1.8.1",
+    "@aws-amplify/cli": "^14.2.3",
     "@types/node": "^25.0.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "tailwindcss": "^3.4.13",
+    "postcss": "^8.4.49",
+    "autoprefixer": "^10.4.20",
+    "vite": "^5.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^4.2.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "dev": "vite"
   }
 }
